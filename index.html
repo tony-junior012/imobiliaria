@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imobiliária Seu Lar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importando fontes do Google Fonts para um visual moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Imobiliária <strong>MICA MIKA</strong></a>
+            <ul class="nav-links">
+                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Alugar</a></li>
+                <li><a href="#">Anunciar Imóvel</a></li>
+                <li><a href="#" class="btn-contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção de Destaque -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Encontre o imóvel dos seus sonhos</h1>
+                <p>O lugar perfeito para você e sua família está aqui.</p>
+            </div>
+        </section>
+
+        <!-- Seção de Imóveis em Destaque -->
+        <section class="properties-section container">
+            <h2>Imóveis em Destaque</h2>
+            <div class="property-grid">
+
+                <!-- Card de Imóvel 1 (Baseado nos dados do script SQL) -->
+                <div class="property-card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/600x400/E8F5E9/333?text=Apartamento+Moderno" alt="Foto do Apartamento Aconchegante no Centro">
+                        <span class="status-tag for-sale">Venda / Aluguel</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Apartamento Aconchegante no Centro</h3>
+                        <p class="location">Rua das Flores, 123 - São Paulo, SP</p>
+                        <div class="property-details">
+                            <span><img src="https://api.iconify.design/material-symbols/bed-outline.svg?color=%23555" alt="ícone quarto" class="icon"> 2 Quartos</span>
+                            <span><img src="https://api.iconify.design/material-symbols/shower-outline.svg?color=%23555" alt="ícone banheiro" class="icon"> 2 Banheiros</span>
+                            <span><img src="https://api.iconify.design/material-symbols/garage-outline.svg?color=%23555" alt="ícone garagem" class="icon"> 1 Vaga</span>
+                            <span><img src="https://api.iconify.design/material-symbols/straighten-outline.svg?color=%23555" alt="ícone área" class="icon"> 75.5 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price rent">R$ 2.500,00 <span class="period">/mês</span></p>
+                            <p class="price sale">R$ 600.000,00</p>
+                        </div>
+                        <a href="#" class="btn-details">Ver Detalhes</a>
+                    </div>
+                </div>
+
+                <!-- Card de Imóvel 2 (Baseado nos dados do script SQL) -->
+                <div class="property-card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/600x400/FFF3E0/333?text=Casa+com+Piscina" alt="Foto da Casa com Piscina em Condomínio">
+                        <span class="status-tag for-sale">Apenas Venda</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Casa com Piscina em Condomínio</h3>
+                        <p class="location">Avenida das Árvores, 456 - Campinas, SP</p>
+                        <div class="property-details">
+                            <span><img src="https://api.iconify.design/material-symbols/bed-outline.svg?color=%23555" alt="ícone quarto" class="icon"> 4 Quartos</span>
+                            <span><img src="https://api.iconify.design/material-symbols/shower-outline.svg?color=%23555" alt="ícone banheiro" class="icon"> 3 Banheiros</span>
+                            <span><img src="https://api.iconify.design/material-symbols/garage-outline.svg?color=%23555" alt="ícone garagem" class="icon"> 3 Vagas</span>
+                            <span><img src="https://api.iconify.design/material-symbols/straighten-outline.svg?color=%23555" alt="ícone área" class="icon"> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price sale">R$ 1.200.000,00</p>
+                        </div>
+                        <a href="#" class="btn-details">Ver Detalhes</a>
+                    </div>
+                </div>
+
+                <!-- Card de Imóvel 3 (Baseado nos dados do script SQL) -->
+                <div class="property-card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/600x400/E1F5FE/333?text=Studio+Moderno" alt="Foto do Studio Moderno perto do Metrô">
+                        <span class="status-tag rented">Alugado</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Studio Moderno perto do Metrô</h3>
+                        <p class="location">Rua da Consolação, 789 - São Paulo, SP</p>
+                        <div class="property-details">
+                            <span><img src="https://api.iconify.design/material-symbols/bed-outline.svg?color=%23555" alt="ícone quarto" class="icon"> 1 Quarto</span>
+                            <span><img src="https://api.iconify.design/material-symbols/shower-outline.svg?color=%23555" alt="ícone banheiro" class="icon"> 1 Banheiro</span>
+                            <span><img src="https://api.iconify.design/material-symbols/garage-outline.svg?color=%23555" alt="ícone garagem" class="icon"> 0 Vagas</span>
+                            <span><img src="https://api.iconify.design/material-symbols/straighten-outline.svg?color=%23555" alt="ícone área" class="icon"> 40 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price rent">R$ 1.800,00 <span class="period">/mês</span></p>
+                        </div>
+                        <a href="#" class="btn-details disabled">Ver Detalhes</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Imobiliária Seu Lar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
