@@ -6,11 +6,7 @@
 define('DB_SERVER', 'localhost'); // Geralmente 'localhost' ou '127.0.0.1'
 define('DB_USERNAME', 'root');    // Seu nome de usuário do MySQL
 define('DB_PASSWORD', '');      // Sua senha do MySQL
-<<<<<<< HEAD
-define('DB_NAME', 'banco'); // O nome do banco de dados que você criou
-=======
 define('DB_NAME', 'bancoimobiliaria'); // O nome do banco de dados que você criou
->>>>>>> f1fe14d (Alterações no banco)
 
 // --- Cria a Conexão ---
 $conexao = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);

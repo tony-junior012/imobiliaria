@@ -20,11 +20,7 @@ $resultado = $conexao->query($sql);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-<<<<<<< HEAD
-
-=======
         <a href = "Teste.php"><button>Teste</button></a>
->>>>>>> f1fe14d (Alterações no banco)
     <header>
         <nav class="container">
             <a href="#" class="logo">Imobiliária <strong>Seu Lar</strong></a>

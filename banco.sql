@@ -1,8 +1,4 @@
-<<<<<<< HEAD
- SCRIPT PARA CRIAÇÃO DO BANCO DE DADOS DE UMA IMOBILIÁRIA
-=======
 create database BancoImobiliaria;
->>>>>>> f1fe14d (Alterações no banco)
 -- Este script é compatível com MySQL.
 
 -- Desativa a verificação de chaves estrangeiras para remover as tabelas na ordem correta sem erros.
@@ -26,18 +22,12 @@ SET FOREIGN_KEY_CHECKS = 1;
 -- Tabela para armazenar informações de todas as pessoas envolvidas (proprietários, inquilinos, compradores).
 CREATE TABLE pessoas (
     id_pessoa INT PRIMARY KEY AUTO_INCREMENT,
-<<<<<<< HEAD
-=======
     retrato JSON, -- adicionar not null posteriormente, deixando sem nada aqui pra facilitar os testes--
->>>>>>> f1fe14d (Alterações no banco)
     nome_completo VARCHAR(255) NOT NULL,
     cpf VARCHAR(14) UNIQUE NOT NULL, -- Formato: XXX.XXX.XXX-XX
     telefone VARCHAR(20),
     email VARCHAR(100) UNIQUE NOT NULL,
-<<<<<<< HEAD
-=======
     data_nascimento DATE NOT NULL,
->>>>>>> f1fe14d (Alterações no banco)
     data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
 ) COMMENT 'Armazena dados de todos os indivíduos: proprietários, inquilinos e compradores.';
 
@@ -45,15 +35,11 @@ CREATE TABLE pessoas (
 CREATE TABLE corretores (
     id_corretor INT PRIMARY KEY AUTO_INCREMENT,
     id_pessoa INT UNIQUE NOT NULL,
-<<<<<<< HEAD
-    creci VARCHAR(20) UNIQUE NOT NULL, -- Registro profissional do corretor
-    data_admissao DATE NOT NULL,
-=======
+    id_pessoa INT UNIQUE NOT NULL,
     retrato JSON, -- adicionar not null posteriormente, deixando sem nada aqui pra facilitar os testes--
     creci VARCHAR(20) UNIQUE NOT NULL, -- Registro profissional do corretor
     data_admissao DATE NOT NULL,
     data_nascimento DATE NOT NULL,
->>>>>>> f1fe14d (Alterações no banco)
     ativo TINYINT(1) DEFAULT 1, -- 1 para TRUE, 0 para FALSE
     FOREIGN KEY (id_pessoa) REFERENCES pessoas(id_pessoa) ON DELETE CASCADE
 ) COMMENT 'Dados dos corretores da imobiliária, com referência à tabela de pessoas.';
@@ -67,16 +53,11 @@ CREATE TABLE imoveis (
     cidade VARCHAR(100) NOT NULL,
     estado VARCHAR(2) NOT NULL, -- Sigla do estado, ex: SP
     cep VARCHAR(9) NOT NULL, -- Formato: XXXXX-XXX
-<<<<<<< HEAD
-    tipo_imovel VARCHAR(50) NOT NULL, -- Ex: Apartamento, Casa, Terreno
-    area_m2 DECIMAL(10, 2) NOT NULL,
-    quartos INT,
-=======
+    cep VARCHAR(9) NOT NULL, -- Formato: XXXXX-XXX
     tipo VARCHAR(50) NOT NULL, -- Ex: Apartamento, Casa, Terreno
     area_m2 DECIMAL(10, 2) NOT NULL,
     quartos INT,
-    imagem_imoveis JSON,
->>>>>>> f1fe14d (Alterações no banco)
+    imagens JSON,
     banheiros INT,
     vagas_garagem INT,
     valor_venda DECIMAL(12, 2),
@@ -143,10 +124,8 @@ CREATE TABLE transacoes (
     tipo_transacao VARCHAR(10) NOT NULL, -- 'Aluguel' ou 'Venda'
     comissao DECIMAL(10, 2) NOT NULL,
     data_transacao DATETIME DEFAULT CURRENT_TIMESTAMP,
-<<<<<<< HEAD
-=======
-    -- 
->>>>>>> f1fe14d (Alterações no banco)
+    comissao DECIMAL(10, 2) NOT NULL,
+    data_transacao DATETIME DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT chk_contrato_unico CHECK (
         (id_contrato_aluguel IS NOT NULL AND id_contrato_venda IS NULL) OR
         (id_contrato_aluguel IS NULL AND id_contrato_venda IS NOT NULL)
@@ -170,11 +149,7 @@ INSERT INTO corretores (id_pessoa, creci, data_admissao) VALUES
 ((SELECT id_pessoa FROM pessoas WHERE email = 'mariana.costa@email.com'), 'CRECI-SP 12345', '2023-01-15');
 
 -- Inserindo Imóveis
-<<<<<<< HEAD
-INSERT INTO imoveis (titulo, endereco, cidade, estado, cep, tipo_imovel, area_m2, quartos, banheiros, vagas_garagem, valor_venda, valor_aluguel, status) VALUES
-=======
 INSERT INTO imoveis (titulo, endereco, cidade, estado, cep, tipo, area_m2, quartos, banheiros, vagas_garagem, valor_venda, valor_aluguel, status) VALUES
->>>>>>> f1fe14d (Alterações no banco)
 ('Apartamento Aconchegante no Centro', 'Rua das Flores, 123', 'São Paulo', 'SP', '01000-000', 'Apartamento', 75.5, 2, 2, 1, 600000.00, 2500.00, 'Disponível'),
 ('Casa com Piscina em Condomínio', 'Avenida das Árvores, 456', 'Campinas', 'SP', '13000-000', 'Casa', 220.0, 4, 3, 3, 1200000.00, NULL, 'Disponível'),
 ('Studio Moderno perto do Metrô', 'Rua da Consolação, 789', 'São Paulo', 'SP', '01301-000', 'Apartamento', 40.0, 1, 1, 0, 450000.00, 1800.00, 'Alugado');
